@@ -19,6 +19,10 @@
         return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
       }
 
+      if(isFacebookApp()){
+        alert("Please open this web page in browser outside of the messenger app");
+      }
+
       document.getElementById("output").innerText = "in app browser: " + isFacebookApp();
     });
   </script>
