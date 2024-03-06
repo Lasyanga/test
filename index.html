@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test is Facebook browser</title>
+</head>
+<body>
+  <div id="output">
+    
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      console.dir("--- loaded");
+      
+      function isFacebookApp() {
+        var ua = navigator.userAgent || navigator.vendor || window.opera;
+        return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
+      }
+
+      document.getElementById("output").innerText = "in app browser: " + isFacebookApp();
+    });
+  </script>
+  
+</body>
+</html>
